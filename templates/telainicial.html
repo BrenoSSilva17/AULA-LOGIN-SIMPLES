@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SENAI - Página Inicial</title>
+
+  <style>
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background: #f4f6f9;
+      color: #222;
+    }
+
+    /* HEADER */
+
+    header{
+      width: 100%;
+      background: #003366;
+      color: white;
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    .logo{
+      font-size: 32px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav a{
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover{
+      color: #ff4d4d;
+    }
+
+    /* HERO */
+
+    .hero{
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 8%;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .hero-text{
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .hero-text h1{
+      font-size: 52px;
+      color: #003366;
+      margin-bottom: 20px;
+      line-height: 1.1;
+    }
+
+    .hero-text span{
+      color: #e30613;
+    }
+
+    .hero-text p{
+      font-size: 18px;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 30px;
+      max-width: 600px;
+    }
+
+    .buttons{
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn{
+      padding: 15px 30px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+      display: inline-block;
+    }
+
+    .btn-primary{
+      background: #004aad;
+      color: white;
+    }
+
+    .btn-primary:hover{
+      background: #003580;
+      transform: translateY(-3px);
+    }
+
+    .btn-secondary{
+      border: 2px solid #004aad;
+      color: #004aad;
+    }
+
+    .btn-secondary:hover{
+      background: #004aad;
+      color: white;
+    }
+
+    /* CARD */
+
+    .hero-image{
+      flex: 1;
+      min-width: 300px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .card{
+      width: 100%;
+      max-width: 420px;
+      background: white;
+      border-radius: 20px;
+      padding: 35px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before{
+      content: "";
+      width: 100%;
+      height: 8px;
+      background: #e30613;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .card h2{
+      color: #003366;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    .info{
+      margin-bottom: 18px;
+      padding: 15px;
+      background: #f4f6f9;
+      border-radius: 12px;
+      transition: 0.3s;
+    }
+
+    .info:hover{
+      transform: scale(1.03);
+    }
+
+    .info h3{
+      color: #004aad;
+      margin-bottom: 5px;
+    }
+
+    .info p{
+      color: #555;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    /* RESPONSIVO */
+
+    @media (max-width: 900px){
+
+      .hero{
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-text h1{
+        font-size: 42px;
+      }
+
+      .buttons{
+        justify-content: center;
+      }
+
+      nav{
+        display: none;
+      }
+
+    }
+
+    @media (max-width: 500px){
+
+      .hero-text h1{
+        font-size: 34px;
+      }
+
+      .hero-text p{
+        font-size: 16px;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="logo">
+      SENAI
+    </div>
+
+    <nav>
+      <a href="#">Início</a>
+      <a href="#">Cursos</a>
+      <a href="#">Sobre</a>
+      <a href="/login">Login</a>
+    </nav>
+
+  </header>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-text">
+
+      <h1>
+        Bem-vindo ao <span>SENAI</span>
+      </h1>
+
+      <p>
+        Plataforma de acesso para alunos, professores e administradores.
+        Cadastre-se para acessar conteúdos exclusivos, cursos técnicos,
+        atividades e informações acadêmicas.
+      </p>
+
+      <div class="buttons">
+
+        <a href="/cadastro" class="btn btn-primary">
+          Criar Conta
+        </a>
+
+        <a href="/login" class="btn btn-secondary">
+          Fazer Login
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- CARD -->
+
+    <div class="hero-image">
+
+      <div class="card">
+
+        <h2>Informações</h2>
+
+        <div class="info">
+          <h3>📚 Cursos Técnicos</h3>
+          <p>
+            Acesse conteúdos modernos e profissionais
+            em diversas áreas da indústria.
+          </p>
+        </div>
+
+        <div class="info">
+          <h3>💻 Plataforma Online</h3>
+          <p>
+            Estude de qualquer lugar com acesso rápido
+            e seguro ao sistema.
+          </p>
+        </div>
+
+        <div class="info">
+          <h3>🏆 Certificação</h3>
+          <p>
+            Desenvolva habilidades e conquiste certificados
+            reconhecidos no mercado.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+    © 2026 SENAI - Todos os direitos reservados
+  </footer>
+
+</body>
+</html>
